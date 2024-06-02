@@ -69,9 +69,9 @@ def scheduler(t, k):
                 completeHoursNotOk.append(facultyHoursNotOk)
 
     rule3MinAttendance = And(completeHoursNotOk)
-    print(rule3MinAttendance)
 
     finalFormula = And(rule1Hours, rule2MinFaculty, rule3MinAttendance)
+    #print(finalFormula)
     model = get_model(finalFormula)
     if model:
         print(model)
